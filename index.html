@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<ul>
+{% for person_hash in site.data.people %}
+{% assign username = person_hash[0] %}
+{% assign person = person_hash[1] %}
+
+{% if username contains "example" %}
+	{% continue %}
+{% endif %}
+
+  <li>
+    <a href="https://github.com/{{ username }}">
+      {{ person.name }}
+      <img src="https://github.com/{{ username }}.png">
+    </a>
+  </li>
+{% endfor %}
+</ul>

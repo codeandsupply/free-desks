@@ -1,0 +1,19 @@
+# Please copy this file to `people/<github username>.yaml` before editing
+# For more information check out README.md or CONTRIBUTING.md
+name: >-
+        *Kim Zick
+
+desc: >-
+        I wear hats, write code, and chew bubble gum.
+
+info:
+        # required
+        - github: https://github.com/rummik
+
+        # optional
+        - website: https://zick.kim
+        - twitter: https://twitter.com/iotasamurai
+        - mastodon: https://awoo.pub/@rummik
+
+projects:
+        - telepathy
