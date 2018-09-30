@@ -15,9 +15,9 @@ jekyll serve --incremental
 ```
 
 
-A `default.nix` is included if you would like to use `nix-shell`:
+A `shell.nix` is included if you would like to use `nix-shell`:
 
 ```
 nix-shell --run 'bundle install'
-nix-shell --run 'jekyll serve --incremental'
+nix-shell --run 'bundle exec jekyll serve --incremental'
 ```

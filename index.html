@@ -2,20 +2,48 @@
 layout: default
 ---
 
-<ul>
-{% for person_hash in site.data.people %}
-{% assign username = person_hash[0] %}
-{% assign person = person_hash[1] %}
+<style>
+.cs-people {
+  float: left;
+  width: 40%;
+}
+
+.cs-projects {
+  float: right;
+  width: 40%;
+}
+</style>
+
+<ul class="cs-people">
+{% for person_hash in site.people %}
+{{ person_hash | inspect }}
 
 {% if username contains "example" %}
-	{% continue %}
+  {% continue %}
 {% endif %}
 
-  <li>
+  <li id="person-{{ username }}">
     <a href="https://github.com/{{ username }}">
       {{ person.name }}
-      <img src="https://github.com/{{ username }}.png">
+      <img src="https://github.com/{{ username }}.png" height="45px">
     </a>
+
+    <em>Projects</em>
+  </li>
+{% endfor %}
+</ul>
+
+<ul class="cs-projects">
+{% for project_hash in site.projects %}
+{{ project_hash | inspect }}
+
+{% if name contains "example" %}
+  {% continue %}
+{% endif %}
+
+  <li id="project-{{ name }}">
+    {{ project.name }}
+    <p>{{ project.desc }}</p>
   </li>
 {% endfor %}
 </ul>

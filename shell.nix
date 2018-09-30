@@ -15,10 +15,6 @@ stdenv.mkDerivation rec {
     libxslt
     pkgconfig
     bundix
+    libffi
   ];
-
-  shellHook = ''
-    bundle install
-    exec bundle exec jekyll serve --incremental
-  '';
 }
