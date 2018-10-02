@@ -12,38 +12,47 @@ layout: default
   float: right;
   width: 40%;
 }
+
+.cs-avatar-small {
+  height: 1em;
+  vertical-align: text-top;
+}
 </style>
 
-<ul class="cs-people">
-{% for person_hash in site.people %}
-{{ person_hash | inspect }}
+<div class="cs-people">
+{% for person in site.people %}
 
-{% if username contains "example" %}
-  {% continue %}
-{% endif %}
+  {% if person.slug == "_example" %}
+    {% continue %}
+  {% endif %}
 
-  <li id="person-{{ username }}">
-    <a href="https://github.com/{{ username }}">
+  <div id="person-{{ person.slug }}">
+    <a href="https://github.com/{{ person.slug }}">
+      <img src="https://github.com/{{ person.slug }}.png" class="cs-avatar-small">
       {{ person.name }}
-      <img src="https://github.com/{{ username }}.png" height="45px">
     </a>
 
-    <em>Projects</em>
-  </li>
+    <p>
+    Projects:
+    {% for slug in person.projects %}
+      {% assign project = site.projects | where: 'slug', slug | first %}
+      <a href="#project-{{ project.slug }}">{{ project.name }}</a>
+      {%- unless forloop.last %},{% endunless %}
+    {% endfor %}
+    </p>
+  </div>
 {% endfor %}
-</ul>
+</div>
 
-<ul class="cs-projects">
-{% for project_hash in site.projects %}
-{{ project_hash | inspect }}
+<div class="cs-projects">
+{% for project in site.projects %}
+  {% if project.slug == "_example" %}
+    {% continue %}
+  {% endif %}
 
-{% if name contains "example" %}
-  {% continue %}
-{% endif %}
-
-  <li id="project-{{ name }}">
-    {{ project.name }}
+  <div id="project-{{ project.slug }}">
+    <h3><a href="{{ project.url }}">{{ project.name }}</a></h3>
     <p>{{ project.desc }}</p>
-  </li>
+  </div>
 {% endfor %}
-</ul>
+</div>

@@ -1,3 +1,19 @@
 ---
 layout: default
 ---
+{% assign person = page %}
+
+<h2>{{ person.name }}</h2>
+
+<ul>
+{% for hash in person.info %}
+  {% for link in hash %}
+    <li><a href="{{ link[1] }}" title="{{ link[0] }}">{{ link[0] | capitalize }}: {{ link[1] }}</a></li>
+  {% endfor %}
+{% endfor %}
+</ul>
+
+{% for projectName in person.projects %}
+  {% assign project = site.projects | where: 'slug', projectName | first %}
+  {{ project.name }}
+{% endfor %}

@@ -9,7 +9,7 @@ desc: >-
   I wear hats, write code, and chew bubble gum.
 
 projects:
-  - {site.projects.kymera}
+  - kymera
   - telepathy
 
 info:

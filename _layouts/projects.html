@@ -1,0 +1,10 @@
+---
+layout: default
+---
+{% assign project = page %}
+{{ project.name }}
+
+{% for name in project.people %}
+  {% assign person = site.people | where: 'slug', name | first %}
+  {{ person.name }}
+{% endfor %}
