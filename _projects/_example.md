@@ -1,6 +1,7 @@
 ---
-# Please copy the contents of this file to `_project/<name>.yaml` before editing
+# Please copy the contents of this file to `_project/<name>.md` before editing
 # For more information check out README.md or CONTRIBUTING.md
+
 name: >-
   My Project
 
@@ -22,7 +23,7 @@ info:
   - website: https://other.example.domain
 
 people:
-  # A case-sensitive list of people from `_people/<name>.yaml`
+  # A case-sensitive list of people from `_people/<name>.md`
   - person1
   - person2
 ---

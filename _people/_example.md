@@ -1,6 +1,7 @@
 ---
-# Please copy the contents of this file to `_people/<you>.yaml` before editing
+# Please copy the contents of this file to `_people/<you>.md` before editing
 # For more information check out README.md or CONTRIBUTING.md
+
 name: >-
   Your Name
 
@@ -18,7 +19,7 @@ info:
   - mastodon: bloodninja@example.domain
 
 projects:
-  # A case-sensitive list of projects from `_projects/<name>.yaml`
+  # A case-sensitive list of projects from `_projects/<name>.md`
   - project1
   - project2
 ---

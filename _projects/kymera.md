@@ -1,5 +1,5 @@
 ---
-# Please copy the contents of this file to `_projects/<name>.yaml` before editing
+# Please copy the contents of this file to `_projects/<name>.md` before editing
 # For more information check out README.md or CONTRIBUTING.md
 
 name: >-

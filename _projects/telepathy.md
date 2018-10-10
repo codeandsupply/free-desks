@@ -1,6 +1,7 @@
 ---
-# Please copy the contents of this file to `project/<name>.yaml` before editing
+# Please copy the contents of this file to `project/<name>.md` before editing
 # For more information check out README.md or CONTRIBUTING.md
+
 name: >-
   Telepathy
 
