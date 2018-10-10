@@ -64,3 +64,4 @@ exclude:
   - shell.nix
   - .github/
   - .editorconfig
+  - CNAME
