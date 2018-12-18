@@ -9,10 +9,16 @@ name: >-
 desc: >-
   A really awesome project
 
-# optional section for 
-needs: # optional section
+# Optional section for project needs
+needs: # optional
   - Application design help
   - Testing feedback
+
+# A list of technologies the project uses
+technology: # optional 
+  - Arduino
+  - C
+  - KiCad
 
 info:
   # required
