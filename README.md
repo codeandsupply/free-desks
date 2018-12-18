@@ -11,7 +11,7 @@ Quickstart:
 ```
 gem install jekyll bundler
 bundle install
-jekyll serve --incremental
+jekyll serve
 ```
 
 
@@ -19,5 +19,5 @@ A `shell.nix` is included if you would like to use `nix-shell`:
 
 ```
 nix-shell --run 'bundle install'
-nix-shell --run 'bundle exec jekyll serve --incremental'
+nix-shell --run 'bundle exec jekyll serve'
 ```
