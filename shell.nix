@@ -1,11 +1,7 @@
-with import <nixpkgs> {};
+{ pkgs ? import <nixpkgs> {} }:
 
-stdenv.mkDerivation rec {
-  name = "free-desks";
-
-  env = buildEnv { name = name; paths = buildInputs; };
-
-  buildInputs = [
+pkgs.mkShell rec {
+  inputsFrom = with pkgs; [
     ruby.devEnv
     git
     sqlite
