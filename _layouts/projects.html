@@ -2,9 +2,46 @@
 layout: default
 ---
 {% assign project = page %}
-{{ project.name }}
 
-{% for name in project.people %}
-  {% assign person = site.people | where: 'slug', name | first %}
-  {{ person.name }}
-{% endfor %}
+<style>
+.links {
+  list-style: none;
+  margin-left: 0;
+}
+
+.cs-person {
+  float: left;
+  text-align: center;
+}
+
+.cs-person img {
+  width: 128px;
+}
+</style>
+
+<div>
+  <h2>{{ project.name }}</h2>
+
+  <p>{{ project.desc }}</p>
+
+  <ul class="links">
+  {% for hash in project.info %}
+    {% for link in hash %}
+      <li>
+        {{ link[0] | capitalize }}:
+        <a href="{{ link[1] }}" title="{{ link[0] }}">{{ link[1] }}</a>
+      </li>
+    {% endfor %}
+  {% endfor %}
+  </ul>
+
+  {% if project.needs %}
+  <h3>Needs</h3>
+  <ul>
+    {% for need in project.needs %}
+    <li>{{ need }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+</div>
