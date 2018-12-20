@@ -8,6 +8,10 @@ name: >-
 desc: >-
   An open-source platform for creating eyes-free smart wearables.
 
+needs:
+  - 3D printing help
+  - Mimic (TTS) syncing with Braille output
+
 info:
   - website: https://kymera.tech
   - github: https://github.com/rummik/kymera
