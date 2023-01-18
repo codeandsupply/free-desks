@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-ruby "2.6.6"
+ruby "3.1.3"
 gem "github-pages"
 
 ## Hello! This is where you manage which Jekyll version is used to run.
