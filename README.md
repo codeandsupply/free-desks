@@ -1,3 +1,5 @@
+:warning: We've suspended our Free Desks for Open Source program pending redevelopment when we have more interest in it.
+
 # free-desks
 Free coworking desks for open source work!
 
